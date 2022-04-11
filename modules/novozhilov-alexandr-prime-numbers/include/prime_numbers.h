@@ -2,7 +2,7 @@
 
 #ifndef MODULES_NOVOZHILOV_ALEXANDR_PRIME_NUMBERS_INCLUDE_PRIME_NUMBERS_H_
 #define MODULES_NOVOZHILOV_ALEXANDR_PRIME_NUMBERS_INCLUDE_PRIME_NUMBERS_H_
-#include<vector>
+#include <vector>
 #include <stdexcept>
 #include <iostream>
 

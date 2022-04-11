@@ -1,4 +1,6 @@
+// Copyright 2022 Novozhilov Alexandr
 #include "..\include\prime_numbers.h"
+#include <vector>
 
 std::vector<int> PrimeNumbers::getPrimeNumbers(int from, int to) {
     if (to < from || from < 0 || to < 2) {
@@ -7,14 +9,17 @@ std::vector<int> PrimeNumbers::getPrimeNumbers(int from, int to) {
     std::vector<int> result;
     std::vector<bool> prime(to + 1, true);
     prime[0] = prime[1] = false;
-    for (int i = 2; i * i <= to; ++i)
-        if (prime[i])
-            for (int j = i * i; j <= to; j += i)
+    for (int i = 2; i * i <= to; ++i) {
+        if (prime[i]) {
+            for (int j = i * i; j <= to; j += i) {
                 prime[j] = false;
+            }
+        }    
+    }
     for (int i = from; i < prime.size(); i++) {
-    	if (prime[i]) {
-    		result.push_back(i);
-    	}
+        if (prime[i]) {
+    	    result.push_back(i);
+        }
     }
     return result;
 }

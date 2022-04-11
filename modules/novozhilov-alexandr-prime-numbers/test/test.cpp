@@ -2,9 +2,10 @@
 
 #include <gtest/gtest.h>
 #include "include/prime_numbers.h"
+#include <vector>
 
 TEST(PrimeNumbersTest, throws_when_incorrect_parameters1) {
-    ASSERT_ANY_THROW(PrimeNumbers::printPrimeNumbers(-2,-5));
+    ASSERT_ANY_THROW(PrimeNumbers::printPrimeNumbers(-2, -5));
 }
 
 TEST(PrimeNumbersTest, throws_when_incorrect_parameters2) {
