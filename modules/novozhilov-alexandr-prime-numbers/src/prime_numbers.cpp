@@ -28,7 +28,7 @@ void PrimeNumbers::printPrimeNumbers(int from, int to) {
     std::vector<int> primeNumbers = getPrimeNumbers(from, to);
     std::cout << "Prime numbers from: " << from << "  to: " << to << std::endl;
     for (int i = 0; i < primeNumbers.size(); i++) {
-        std::cout << primeNumbers[i]<<" ";
+        std::cout << primeNumbers[i] <<" ";
     }
     std::cout << std::endl;
 }
