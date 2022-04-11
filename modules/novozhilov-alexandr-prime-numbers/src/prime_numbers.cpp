@@ -16,7 +16,7 @@ std::vector<int> PrimeNumbers::getPrimeNumbers(int from, int to) {
             }
         }
     }
-    for (int i = from; i < prime.size(); i++) {
+    for (int i = from; i < static_cast<int>(prime.size()); i++) {
         if (prime[i]) {
             result.push_back(i);
         }
@@ -27,7 +27,7 @@ std::vector<int> PrimeNumbers::getPrimeNumbers(int from, int to) {
 void PrimeNumbers::printPrimeNumbers(int from, int to) {
     std::vector<int> primeNumbers = getPrimeNumbers(from, to);
     std::cout << "Prime numbers from: " << from << "  to: " << to << std::endl;
-    for (int i = 0; i < primeNumbers.size(); i++) {
+    for (int i = 0; i < static_cast<int>(primeNumbers.size()); i++) {
         std::cout << primeNumbers[i] <<" ";
     }
     std::cout << std::endl;
