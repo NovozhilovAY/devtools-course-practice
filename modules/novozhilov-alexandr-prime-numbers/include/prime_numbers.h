@@ -7,6 +7,8 @@
 #include <iostream>
 
 class PrimeNumbers {
+ private:
+    PrimeNumbers();
  public:
     static std::vector<int> getPrimeNumbers(int from, int to);
     static void printPrimeNumbers(int from, int to);
