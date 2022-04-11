@@ -1,8 +1,8 @@
 // Copyright 2022 Novozhilov Alexandr
 
 #include <gtest/gtest.h>
-#include "include/prime_numbers.h"
 #include <vector>
+#include "include/prime_numbers.h"
 
 TEST(PrimeNumbersTest, throws_when_incorrect_parameters1) {
     ASSERT_ANY_THROW(PrimeNumbers::printPrimeNumbers(-2, -5));
