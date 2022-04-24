@@ -16,7 +16,7 @@ std::string Application::getHelp(const std::string& appname) {
         "Format for arguments:\n" +
         appname + " <element_to_find> \n"
         "Argument must be positive!\n"
-        "Demo array - [-1, 3, 5, 15, 46]";
+        "Demo array - [1, 3, 5, 15, 46]";
 }
 
 std::string Application::operator()(int argc, const char** argv) {

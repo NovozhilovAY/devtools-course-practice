@@ -49,7 +49,7 @@ set_tests_properties (${prefix}_Returns_Correct_Index PROPERTIES
 
 add_test(
     NAME ${prefix}_Returns_Minus_One
-    COMMAND ${APPLICATION} 1
+    COMMAND ${APPLICATION} 2
 )
 
 set_tests_properties (${prefix}_Returns_Minus_One PROPERTIES
