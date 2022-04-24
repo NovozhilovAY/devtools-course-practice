@@ -34,8 +34,8 @@ add_test(
     COMMAND ${APPLICATION} as
 )
 
-set_tests_properties (${prefix}_Check_Wrong_Argument_Type
-    PASS_REGULAR_EXPRESSION "Error occured: Error occured: Wrong argument type."
+set_tests_properties (${prefix}_Check_Wrong_Argument_Type PROPERTIES
+    PASS_REGULAR_EXPRESSION "Error occured: Wrong argument type."
     LABELS "${MODULE}")
 
 add_test(
@@ -43,7 +43,7 @@ add_test(
     COMMAND ${APPLICATION} 3
 )
 
-set_tests_properties (${prefix}_Returns_Correct_Index
+set_tests_properties (${prefix}_Returns_Correct_Index PROPERTIES
     PASS_REGULAR_EXPRESSION "1"
     LABELS "${MODULE}")
 
@@ -52,6 +52,6 @@ add_test(
     COMMAND ${APPLICATION} 1
 )
 
-set_tests_properties (${prefix}_Returns_Minus_One
+set_tests_properties (${prefix}_Returns_Minus_One PROPERTIES
     PASS_REGULAR_EXPRESSION "-1"
     LABELS "${MODULE}")
