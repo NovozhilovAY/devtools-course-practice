@@ -11,7 +11,8 @@
 #include "include/binary_search.h"
 
 std::string Application::getHelp(const std::string& appname) {
-    return  "This is an application to demonstrate the operation of the binary search algorithm\n" \
+    return  "This is an application to demonstrate"
+        " the operation of the binary search algorithm\n"
         "Format for arguments:\n" +
         appname + " <element_to_find> \n"
         "Argument must be positive!\n"
@@ -27,7 +28,7 @@ std::string Application::operator()(int argc, const char** argv) {
     try {
         if (argc > 2) {
             std::string error_msg = "Error occured: ";
-            error_msg += "Should be 1 argument.\nYou entered more!\n" ;
+            error_msg += "Should be 1 argument.\nYou entered more!\n";
             throw std::runtime_error(error_msg);
         }
         a = parseArgument(argv[1]);
