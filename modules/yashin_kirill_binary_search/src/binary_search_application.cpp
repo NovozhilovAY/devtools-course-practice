@@ -20,8 +20,8 @@ std::string Application::getHelp(const std::string& appname) {
 }
 
 std::string Application::operator()(int argc, const char** argv) {
-    int a;
-    int x;
+    int numberToFind;
+    int result;
     std::vector<int> demoArr { 1, 3, 5, 15, 46 };
     if (argc == 1)
         return getHelp(argv[0]);
@@ -31,17 +31,17 @@ std::string Application::operator()(int argc, const char** argv) {
             error_msg += "Should be 1 argument.\nYou entered more!\n";
             throw std::runtime_error(error_msg);
         }
-        a = parseArgument(argv[1]);
+        numberToFind = parseArgument(argv[1]);
     }
     catch (std::exception& exp) {
         return exp.what();
     }
 
     BinarySearch<int> bs;
-    x = bs.BinSearch(a, demoArr, 0, 4);
+    result = bs.BinSearch(numberToFind, demoArr, 0, 4);
 
     std::ostringstream oss;
-    oss << x;
+    oss << result;
     return oss.str();
 }
 
